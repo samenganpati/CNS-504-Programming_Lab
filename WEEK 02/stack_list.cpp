@@ -3,7 +3,7 @@
 using namespace std;
 
 
-template<typename T> class Stack {
+template<typename T> class StackList {
 	
 	public:
 	SinglyList<T> st;
@@ -14,33 +14,20 @@ template<typename T> class Stack {
 };
 
 
-template<typename T> void Stack<T> :: push(T data){
+template<typename T> void StackList<T> :: push(T data){
 	
 	st.push_back(data);
 }
 
-template<typename T> void Stack<T> :: pop(){
+template<typename T> void StackList<T> :: pop(){
 	
 	st.delete_end();
 }
 
-template<typename T> T Stack<T> :: top(){
+template<typename T> T StackList<T> :: top(){
 	
 	return (st.tail)->node_data;
 }
 
-int main() {
-        Stack<int> s;
-        s.push(100);
-        s.push(200);
-        s.push(300);
 
-        cout<<s.top()<<endl;
-
-        s.pop();
-        s.pop();
-
-        cout<<s.top()<<endl;
-        return 0;
-}
 

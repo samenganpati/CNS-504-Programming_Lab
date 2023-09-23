@@ -2,7 +2,7 @@
 #include"dynamic_array.cpp"
 using namespace std;
 
-template<typename T> class Queue {
+template<typename T> class QueueArray {
 	
 	public:
 		DynamicArray<T> qu;
@@ -12,36 +12,22 @@ template<typename T> class Queue {
 		T front();
 };
 
-template<typename T> void Queue<T> ::  enqueue(T data) {
+template<typename T> void QueueArray<T> ::  enqueue(T data) {
 	
 	qu.push_back(data);
 }
 
-template<typename T> void Queue<T> :: dequeue(){
+template<typename T> void QueueArray<T> :: dequeue(){
 	
 	qu.delete_at_loc(0);
 }
 
 
-template<typename T> T Queue<T> :: front(){
+template<typename T> T QueueArray<T> :: front(){
 
 	return qu.arr[0];
 }
 
 
 
-int main() {
 
-	Queue<int> qu;
-	qu.enqueue(100);
-	qu.enqueue(200);
-	qu.enqueue(300);
-
-	cout<<qu.front()<<endl;
-
-	qu.dequeue();
-	qu.dequeue();
-
-	cout<<qu.front()<<endl;
-	return 0;
-}

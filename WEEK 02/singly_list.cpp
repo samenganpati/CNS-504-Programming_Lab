@@ -14,9 +14,8 @@ template<typename T> class Node {
 };
 
 template<typename T> class SinglyList {
- 	public:
-     	Node<T> *head,*tail;
- 
+    public:
+    Node<T> *head,*tail;
         SinglyList(){
             head = NULL;
             tail = NULL;
