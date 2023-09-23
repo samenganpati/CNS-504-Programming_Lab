@@ -27,7 +27,7 @@ dynamic_array.o: dynamic_array.cpp
 	g++ -c dynamic_array.cpp
 singly_list.o: singly_list.cpp
 	g++ -c singly_list.cpp
-ins_del_at_end.o: ins_del_at_end.cpp
+ins_del_at_loc.o: ins_del_at_loc.cpp
 	g++ -c ins_del_at_loc.cpp
 
 
