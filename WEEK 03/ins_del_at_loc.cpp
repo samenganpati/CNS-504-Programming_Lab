@@ -51,7 +51,7 @@ int main()
 			vec.insert_at_loc(rand() % n,rand() % size_ins + 1);
 		
 		for(int i = 0;i< size_del;i++){
-			int idx = vec.size - 1;
+			int idx = vec.len() - 1;
 			vec.delete_at_loc(rand() % n);
 		}
 			
