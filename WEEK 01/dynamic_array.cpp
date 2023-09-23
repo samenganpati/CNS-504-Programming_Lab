@@ -57,6 +57,7 @@ template<typename T> void DynamicArray<T> ::  push_back(T ele){
             this->arr = new T[capacity];
             for(int j = 0;j < this->size;j++)
                 this->arr[j] = copyArray[j];
+            delete[] copyArray;
             this->arr[this->size] = ele;
             this->size++;
         }else{
@@ -88,6 +89,7 @@ template<typename T> void DynamicArray<T> :: insert_at_loc(int loc,T ele){
                 this->arr = new T[capacity];
                 for(int j = 0;j < this->size;j++)
                     this->arr[j] = copyArray[j];
+                delete[] copyArray;
                 for(int i = this->capacity - 1;i > loc;i--)
                     this->arr[i] = this->arr[i - 1];
                 this->arr[loc] = ele;

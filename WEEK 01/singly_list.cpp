@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int size_of_slist;
+static int size_of_slist;
 template<typename T> class Node {
     public:
         T node_data;
@@ -14,8 +14,8 @@ template<typename T> class Node {
 };
 
 template<typename T> class SinglyList {
-    Node<T> *head,*tail;
     public:
+    Node<T> *head,*tail;
         SinglyList(){
             head = NULL;
             tail = NULL;

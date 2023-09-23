@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int size_of_dlist;
+static int size_of_dlist;
 template<typename T> class Noded {
     public:
         T data;
@@ -126,7 +126,7 @@ template<typename T> void DoublyList<T> :: remove_front(){
         size_of_dlist--;
     }
 
-    if(size_of_slist == 0){
+    if(size_of_dlist == 0){
             head = NULL;
             tail = NULL;
     }
@@ -144,7 +144,7 @@ template<typename T> void DoublyList<T> :: remove_back(){
         size_of_dlist--;
     }
 
-    if(size_of_slist == 0){
+    if(size_of_dlist == 0){
             head = NULL;
             tail = NULL;
     }
@@ -178,7 +178,7 @@ template<typename T> void DoublyList<T> :: remove_at_loc(int loc){
             size_of_dlist--;
         }
 
-    if(size_of_slist == 0){
+    if(size_of_dlist == 0){
             head = NULL;
             tail = NULL;
     }
@@ -211,7 +211,7 @@ template<typename T> void DoublyList<T> :: display_backward(){
 template<typename T> bool DoublyList<T> :: find(T key){
     Noded<T> *temp = head;
     while(temp != NULL){
-        if(temp->node_data == key)
+        if(temp->data == key)
             return true;
         temp = temp->forw;
     }

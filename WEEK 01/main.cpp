@@ -32,5 +32,12 @@ int main() {
 	name.push_back("jeet");
 	name.display_all();
 	cout<<name.find("jeet")<<endl;
+	
+	DoublyList<string> n;
+	n.push_back("samen");
+	n.push_front("jeevu");
+	n.push_back("jeet");
+	n.display_forward();
+	cout<<n.find("jeet")<<endl;
 	return 0;
 }

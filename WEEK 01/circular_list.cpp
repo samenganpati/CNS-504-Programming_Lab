@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int size_of_clist;
+static int size_of_clist;
 template<typename T> class Nodec {
     public:
         T node_data;
